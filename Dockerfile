@@ -9,7 +9,7 @@ WORKDIR /var/www/html
 
 
 # Install dependencies
-RUN curl -s https://deb.nodesource.com/setup_18.x | sh
+RUN curl -s https://deb.nodesource.com/setup_20.x | sh
 
 RUN apt-get update && apt-get install -y \
     build-essential apt-utils \
