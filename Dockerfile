@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:8.2-fpm
 
 
 COPY ./php/local.ini /usr/local/etc/php/conf.d/local.ini
@@ -9,7 +9,7 @@ WORKDIR /var/www/html
 
 
 # Install dependencies
-RUN curl -s https://deb.nodesource.com/setup_16.x | sh
+RUN curl -s https://deb.nodesource.com/setup_18.x | sh
 
 RUN apt-get update && apt-get install -y \
     build-essential apt-utils \
