@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     nodejs \
+    python2 \
     curl
 
 # Clear cache
