@@ -8,7 +8,6 @@ WORKDIR /var/www/html
 
 # Install dependencies
 RUN curl -s https://deb.nodesource.com/setup_20.x | sh
-RUN curl https://pyenv.run | bash
 
 RUN apt-get update && apt-get install -y \
     build-essential apt-utils \
@@ -23,6 +22,14 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     nodejs \
+    python-yaml \
+    python-jinja2 \
+    python-httplib2 \
+    python-keyczar \
+    python-paramiko \
+    python-setuptools \
+    python-pkg-resources \
+    python-pip \
     curl
 
 # Clear cache
