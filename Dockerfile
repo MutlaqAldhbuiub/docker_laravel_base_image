@@ -7,7 +7,6 @@ COPY  ./php/www.conf /usr/local/etc/php-fpm.d/www.conf
 # Set working directory
 WORKDIR /var/www/html
 
-
 # Install dependencies
 RUN curl -s https://deb.nodesource.com/setup_20.x | sh
 
@@ -25,6 +24,9 @@ RUN apt-get update && apt-get install -y \
     git \
     nodejs \
     curl
+
+# Install python 
+RUN apt-get install -y python python-pip
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
