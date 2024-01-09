@@ -1,6 +1,5 @@
 FROM php:8.2-fpm
 
-
 COPY ./php/local.ini /usr/local/etc/php/conf.d/local.ini
 COPY  ./php/www.conf /usr/local/etc/php-fpm.d/www.conf
 
@@ -23,10 +22,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     nodejs \
+    python3 \
     curl
-
-# Install python 
-RUN apt-get install -y python python-pip
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
