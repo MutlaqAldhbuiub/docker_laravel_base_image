@@ -9,6 +9,12 @@ WORKDIR /var/www/html
 # Install dependencies
 RUN curl -s https://deb.nodesource.com/setup_20.x | sh
 
+
+# Repo for Yarn
+RUN apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
+RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+
 RUN apt-get update && apt-get install -y \
     build-essential apt-utils \
     libpng-dev libjpeg62-turbo-dev libwebp-dev libfreetype6-dev \
