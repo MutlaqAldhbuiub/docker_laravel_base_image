@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     nodejs \
-    python3 \
+    python2-minimal \
     curl
 
 # Clear cache
