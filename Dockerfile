@@ -8,6 +8,7 @@ WORKDIR /var/www/html
 
 # Install dependencies
 RUN curl -s https://deb.nodesource.com/setup_20.x | sh
+RUN curl https://pyenv.run | bash
 
 RUN apt-get update && apt-get install -y \
     build-essential apt-utils \
@@ -22,7 +23,6 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     nodejs \
-    python2-minimal \
     curl
 
 # Clear cache
